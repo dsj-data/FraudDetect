@@ -1,16 +1,19 @@
 # Fraud Detection System
+
 This is a machine learning-based fraud detection system that identifies fraudulent transactions using a RandomForest classifier.
 
 The model is trained on Kaggle's Fraudulent Transactions Dataset and deployed using Flask.
 
 --------------------------
 **Project Overview**
+
 Fraudulent financial transactions can cause significant losses to businesses and individuals.
 
 This project aims to detect fraudulent transactions using machine learning and provide a web-based prediction system.
 
 --------------------------
 **Key Features**
+
 - Kaggle dataset integration
 - Data preprocessing & feature engineering
 - Handling imbalanced data with SMOTE
@@ -19,6 +22,7 @@ This project aims to detect fraudulent transactions using machine learning and p
 
 --------------------------
 **Data Processing Workflow**
+
 1) Download & Load Data
 Data is fetched from Kaggle using load.py.
 fraud_detect.py reads the dataset (Fraud.csv).
@@ -47,12 +51,14 @@ Displays fraud prediction results
 
 --------------------------
 **Improvements & Next Steps**
-Use Deep Learning models (e.g., LSTM, CNN) for better fraud detection
-Implement real-time streaming detection using Kafka
-Deploy to AWS/GCP for cloud-based fraud detection
+
+- Use Deep Learning models (e.g., LSTM, CNN) for better fraud detection
+- Implement real-time streaming detection using Kafka
+- Deploy to AWS/GCP for cloud-based fraud detection
 
 --------------------------
 **Original Data Dictionary:**
+
 step - maps a unit of time in the real world. In this case 1 step is 1 hour of time. Total steps 744 (30 days simulation).
 
 type - CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER.
