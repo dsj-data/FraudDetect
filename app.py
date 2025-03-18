@@ -49,11 +49,6 @@ def predict():
     df['bal_diff_orig'] = df['newbalanceOrig'] - df['oldbalanceOrg']
     df['bal_diff_dest'] = df['newbalanceDest'] - df['oldbalanceDest']
     
-    # # Scale the relevant columns
-    # scale_col = ['amount', 'oldbalanceOrg', 'newbalanceOrig', 'oldbalanceDest', 'newbalanceDest']
-    # df[scale_col] = scaler.transform(df[scale_col])
-    
-       
     # Predict using the model
     prediction = model.predict(df)[0]
     print(f"Prediction: {prediction}")

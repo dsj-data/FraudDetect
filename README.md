@@ -1,6 +1,6 @@
 # FraudDetect
 Fraud Detection System
-A machine learning-based fraud detection system that identifies fraudulent transactions using a RandomForest classifier.
+This is a machine learning-based fraud detection system that identifies fraudulent transactions using a RandomForest classifier.
 The model is trained on Kaggle's Fraudulent Transactions Dataset and deployed using Flask.
 
 --------------------------

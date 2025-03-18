@@ -1,4 +1,4 @@
-## Install/import required libraries------------------------ 
+## Istall/import required libraries------------------------ 
 import pandas as pd
 import numpy as np
 import seaborn as sns

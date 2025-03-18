@@ -1,4 +1,4 @@
-# Import necessary libraries
+# Import
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 # get dataset directly from kaggle
