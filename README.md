@@ -15,30 +15,30 @@ Goal: Detect fraudulent transactions with high recall while minimizing false pos
 ## Data Processing Workflow
 
 **1) Download & Load Data**
-Data is fetched from Kaggle using load.py.
-fraud_detect.py reads the dataset (Fraud.csv).
+- Data is fetched from Kaggle using load.py.
+- fraud_detect.py reads the dataset (Fraud.csv).
 
 **2) Exploratory Data Analysis (EDA)**
-Basic statistics & missing value check
-Distribution of fraud vs. legitimate transactions
+- Basic statistics & missing value check
+- Distribution of fraud vs. legitimate transactions
 
 **3) Feature Engineering**
-Unnecessary columns dropped: nameOrig, nameDest, isFlaggedFraud
-Transaction type is one-hot encoded
-New features created: bal_diff_orig, bal_diff_dest
-StandardScaler applied to numerical features
+- Unnecessary columns dropped: nameOrig, nameDest, isFlaggedFraud
+- Transaction type is one-hot encoded
+- New features created: bal_diff_orig, bal_diff_dest
+- StandardScaler applied to numerical features
 
 **4) Handling Class Imbalance**
-SMOTE (Synthetic Minority Over-sampling Technique) used to balance fraud cases
+- SMOTE (Synthetic Minority Over-sampling Technique) used to balance fraud cases
 
 **5) Model Training & Evaluation**
-RandomForestClassifier trained on resampled data
-Evaluation metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC
+- RandomForestClassifier trained on resampled data
+- Evaluation metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC
 
 **6) Deploy Model with Flask**
-app.py loads the trained model (fraud_model.pkl)
-Receives transaction details via web form (index.html)
-Displays fraud prediction results
+- app.py loads the trained model (fraud_model.pkl)
+- Receives transaction details via web form (index.html)
+- Displays fraud prediction results
 
 --------------------------
 ## Results
@@ -47,7 +47,7 @@ Displays fraud prediction results
 
 --------------------------
 ## Business Impact
-Improved fraud detection performance → potential to save millions in fraudulent losses.
+- Improved fraud detection performance → potential to save millions in fraudulent losses.
 
 --------------------------
 ## Next Steps
