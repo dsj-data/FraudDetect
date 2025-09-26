@@ -1,25 +1,16 @@
-# Fraud Detection System
+# Fraud Detection Model (PaySim Dataset)
 
-This is a machine learning-based fraud detection system that identifies fraudulent transactions using a RandomForest classifier.
-
-The model is trained on Kaggle's Fraudulent Transactions Dataset and deployed using Flask.
-
---------------------------
-**Project Overview**
-
-Fraudulent financial transactions can cause significant losses to businesses and individuals.
-
-This project aims to detect fraudulent transactions using machine learning and provide a web-based prediction system.
+## Overview
+Built a fraud detection model using the **PaySim synthetic dataset** (600K+ transaction records).  
+Goal: Detect fraudulent transactions with high recall while minimizing false positives. Then provide a web-based prediction system.
 
 --------------------------
-**Key Features**
-
-- Kaggle dataset integration
-- Data preprocessing & feature engineering
-- Handling imbalanced data with SMOTE
-- Fraud detection using RandomForestClassifier
-- Flask web app for real-time prediction
-
+## Approach
+1. Data preprocessing (handling imbalance, feature engineering).  
+2. Model comparison: Logistic Regression, Random Forest, XGBoost.  
+3. Applied **SMOTE** + hyperparameter tuning for XGBoost.
+4. Deployed using Flask (for real-time prediction)
+   
 --------------------------
 **Data Processing Workflow**
 
@@ -50,11 +41,23 @@ Receives transaction details via web form (index.html)
 Displays fraud prediction results
 
 --------------------------
-**Improvements & Next Steps**
+## Results
+- XGBoost: **92% accuracy, 87% recall, AUC = 0.95**  
+- Outperformed baseline Logistic Regression (recall = 63%).  
 
+--------------------------
+## Business Impact
+Improved fraud detection performance → potential to save millions in fraudulent losses.
+
+--------------------------
+## Next Steps
 - Use Deep Learning models (e.g., LSTM, CNN) for better fraud detection
 - Implement real-time streaming detection using Kafka
 - Deploy to AWS/GCP for cloud-based fraud detection
+
+
+
+
 
 --------------------------
 **Original Data Dictionary:**
