@@ -30,11 +30,14 @@ Goal: Detect fraudulent transactions with high recall while minimizing false pos
 **4) Handling Class Imbalance**
 - SMOTE (Synthetic Minority Over-sampling Technique) used to balance fraud cases
 
-**5) Model Training & Evaluation**
-- RandomForestClassifier trained on resampled data
+**5) Hyperparameter Tuning**
+- Used RandomizedSearchCV to explore and apply best hyperparameters 
+
+**6) Model Training & Evaluation**
+- RandomForestClassifier, LogisticRegression, XGBClassifier trained on resampled data
 - Evaluation metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC
 
-**6) Deploy Model with Flask**
+**7) Deploy Model with Flask**
 - app.py loads the trained model (fraud_model.pkl)
 - Receives transaction details via web form (index.html)
 - Displays fraud prediction results
