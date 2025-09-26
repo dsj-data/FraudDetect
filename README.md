@@ -1,7 +1,7 @@
 # Fraud Detection Model (PaySim Dataset)
 
 ## Overview
-Built a fraud detection model using the **PaySim synthetic dataset** (600K+ transaction records).  
+Built a fraud detection model using the **PaySim synthetic dataset** (700K+ transaction records).  
 Goal: Detect fraudulent transactions with high recall while minimizing false positives. Then provide a web-based prediction system.
 
 --------------------------
@@ -25,8 +25,7 @@ Goal: Detect fraudulent transactions with high recall while minimizing false pos
 **3) Feature Engineering**
 - Unnecessary columns dropped: nameOrig, nameDest, isFlaggedFraud
 - Transaction type is one-hot encoded
-- New features created: bal_diff_orig, bal_diff_dest
-- StandardScaler applied to numerical features
+- New features created: transaction_diff, transfer_ratio, high_risk_type
 
 **4) Handling Class Imbalance**
 - SMOTE (Synthetic Minority Over-sampling Technique) used to balance fraud cases
@@ -42,8 +41,8 @@ Goal: Detect fraudulent transactions with high recall while minimizing false pos
 
 --------------------------
 ## Results
-- XGBoost: **92% accuracy, 87% recall, AUC = 0.95**  
-- Outperformed baseline Logistic Regression (recall = 63%).  
+- XGBoost: **99.99% accuracy, 99.43% recall, 96.57% precision, 97.98% f1-score**  
+- Outperformed baseline existing isFlaggedFraud
 
 --------------------------
 ## Business Impact
