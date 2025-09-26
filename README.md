@@ -12,30 +12,30 @@ Goal: Detect fraudulent transactions with high recall while minimizing false pos
 4. Deployed using Flask (for real-time prediction)
    
 --------------------------
-**Data Processing Workflow**
+## Data Processing Workflow
 
-1) Download & Load Data
+**1) Download & Load Data**
 Data is fetched from Kaggle using load.py.
 fraud_detect.py reads the dataset (Fraud.csv).
 
-2) Exploratory Data Analysis (EDA)
+**2) Exploratory Data Analysis (EDA)**
 Basic statistics & missing value check
 Distribution of fraud vs. legitimate transactions
 
-3) Feature Engineering
+**3) Feature Engineering**
 Unnecessary columns dropped: nameOrig, nameDest, isFlaggedFraud
 Transaction type is one-hot encoded
 New features created: bal_diff_orig, bal_diff_dest
 StandardScaler applied to numerical features
 
-4) Handling Class Imbalance
+**4) Handling Class Imbalance**
 SMOTE (Synthetic Minority Over-sampling Technique) used to balance fraud cases
 
-5) Model Training & Evaluation
+**5) Model Training & Evaluation**
 RandomForestClassifier trained on resampled data
 Evaluation metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC
 
-6) Deploy Model with Flask
+**6) Deploy Model with Flask**
 app.py loads the trained model (fraud_model.pkl)
 Receives transaction details via web form (index.html)
 Displays fraud prediction results
